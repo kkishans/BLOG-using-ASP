@@ -10,42 +10,42 @@
 namespace myblog {
     
     
-    public partial class main {
+    public partial class login {
         
         /// <summary>
-        /// head control.
+        /// txtUname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.TextBox txtUname;
         
         /// <summary>
-        /// form1 control.
+        /// txtpass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox txtpass;
         
         /// <summary>
-        /// btnlogin control.
+        /// btnUsersubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnlogin;
+        protected global::System.Web.UI.WebControls.Button btnUsersubmit;
         
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// btnAdminsubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Button btnAdminsubmit;
     }
 }
