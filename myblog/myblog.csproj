@@ -50,6 +50,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\addpost.aspx" />
     <Content Include="admin\dashboard.aspx" />
     <Content Include="App_Data\blog.mdf" />
     <Content Include="App_Data\blog_log.ldf">
@@ -67,6 +68,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin\addpost.aspx.cs">
+      <DependentUpon>addpost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\addpost.aspx.designer.cs">
+      <DependentUpon>addpost.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\admin.Master.cs">
       <DependentUpon>admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -110,7 +118,7 @@
   <ItemGroup>
     <Folder Include="App_Code\" />
   </ItemGroup>
-  <ItemGroup>
+   <ItemGroup>
     <Content Include="admin\admin.Master" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
