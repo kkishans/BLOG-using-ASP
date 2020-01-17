@@ -21,7 +21,7 @@
         </div>
         <div class="menubar">
             <ul>
-                <li>Home</li>
+                <li><a href="addpost.aspx">Add Post</a></li>
                 <li>About Us</li>
                 <li>Services</li>
             </ul>
