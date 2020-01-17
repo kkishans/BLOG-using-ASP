@@ -10,7 +10,7 @@ namespace myblog
 {
     public partial class login : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection("Data Source=.\\SQLEXPRESS;AttachDbFilename='C:\\Users\\kishan\\Documents\\Visual Studio 2010\\Projects\\BLOG-using-ASP\\myblog\\App_Data\\blog.mdf';Integrated Security=True;User Instance=True");
+        SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\upeksha\Documents\GitHub\BLOG-using-ASP\myblog\App_Data\blog.mdf;Integrated Security=True;User Instance=True");
         SqlCommand cmd;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -35,7 +35,7 @@ namespace myblog
                 {
                    
                     Label1.Text = txtUname.Text.ToString();
-                    Session["user"] = "kishan";
+                    Session["user"] = txtUname.Text;
                     Response.Redirect("~/admin/dashboard.aspx");
                 }
                 else
@@ -65,7 +65,7 @@ namespace myblog
 
                 if (dr.Read())
                 {
-                    Session["user"] = "kishan";
+                    Session["user"] = txtUname.Text;
                     Response.Redirect("~/admin/dashboard.aspx");
                 }
                 else
