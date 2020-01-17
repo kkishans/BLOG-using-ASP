@@ -107,7 +107,9 @@
   <ItemGroup>
     <Content Include="main.Master" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="admin\admin.Master" />
   </ItemGroup>

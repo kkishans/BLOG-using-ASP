@@ -3,7 +3,13 @@
     <title>Home Page</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>
-        this is main
-    </h1>
+   
+   
+    <asp:Table ID="Table1" runat="server">
+        <asp:TableRow>
+            <asp:TableHeaderCell ColumnSpan="2">Posts</asp:TableHeaderCell>
+
+        </asp:TableRow>
+        
+    </asp:Table>
 </asp:Content>
