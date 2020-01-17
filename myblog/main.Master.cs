@@ -4,7 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using System.Data;
+using System.Configuration;
 namespace myblog
 {
     public partial class main : System.Web.UI.MasterPage
@@ -16,7 +17,12 @@ namespace myblog
 
         protected void btnlogin_Click(object sender, EventArgs e)
         {
-            Response.Redirect("login.aspx");
+           Response.Redirect("login.aspx");
+        }
+
+        protected void btnhome_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("index.aspx");
         }
     }
 }

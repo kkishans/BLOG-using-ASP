@@ -3,7 +3,16 @@
     <title>Home Page</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>
-        this is main
-    </h1>
+    <div class="post">
+        
+        <div class="post-head">
+            This is post Head   
+        </div>
+        <div class="post-body">
+            this is about the post.
+        </div>
+        <div class="post-footer">
+            written by Kishan Khant.
+        </div>
+    </div>
 </asp:Content>
