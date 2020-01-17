@@ -11,7 +11,12 @@ namespace myblog.admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["user"] != null)
+            {
+                Label1.Text = Session["user"].ToString();
+            }
 
+            else { Response.Redirect("../login.aspx"); }
         }
     }
 }

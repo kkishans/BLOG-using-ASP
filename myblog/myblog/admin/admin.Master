@@ -15,9 +15,7 @@
     <div>
         <div class="navbar">
             My Blog
-              <asp:Button ID="logout" class="btn" runat="server" Text="Log Out" 
-                onclick="logout_Click" />
-           
+            <button  name ="login" class="btn" align="right">Log out</button>
         </div>
         <div class="menubar">
             <ul>
