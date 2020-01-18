@@ -7,8 +7,15 @@
    <asp:Table ID="Table1" runat="server" CssClass="post-table" 
         CellPadding="2" CellSpacing="2" >
         <asp:TableRow>
-            <asp:TableHeaderCell ColumnSpan="2"><h1>All Posts by <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label> </h1></asp:TableHeaderCell>
+            <asp:TableHeaderCell ColumnSpan="4"><h1>All Posts by <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label> </h1></asp:TableHeaderCell>
 
+        </asp:TableRow>
+
+        <asp:TableRow>
+            <asp:TableHeaderCell>Post Id</asp:TableHeaderCell>
+            <asp:TableHeaderCell>Post Title</asp:TableHeaderCell>
+            <asp:TableHeaderCell>Update</asp:TableHeaderCell>
+            <asp:TableHeaderCell>Delete</asp:TableHeaderCell>
         </asp:TableRow>
         
     </asp:Table>

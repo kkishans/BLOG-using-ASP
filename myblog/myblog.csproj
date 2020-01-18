@@ -52,6 +52,7 @@
   <ItemGroup>
     <Content Include="admin\addpost.aspx" />
     <Content Include="admin\dashboard.aspx" />
+    <Content Include="admin\updatepost.aspx" />
     <Content Include="App_Data\blog.mdf" />
     <Content Include="App_Data\blog_log.ldf">
       <DependentUpon>blog.mdf</DependentUpon>
@@ -90,6 +91,13 @@
     </Compile>
     <Compile Include="admin\dashboard.aspx.designer.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\updatepost.aspx.cs">
+      <DependentUpon>updatepost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\updatepost.aspx.designer.cs">
+      <DependentUpon>updatepost.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
