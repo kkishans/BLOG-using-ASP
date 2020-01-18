@@ -3,8 +3,15 @@
     <title>Home</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <p>This is Home Page
-    </p>
+   
+   <asp:Table ID="Table1" runat="server" CssClass="post-table" 
+        CellPadding="2" CellSpacing="2" >
+        <asp:TableRow>
+            <asp:TableHeaderCell ColumnSpan="2"><h1>All Posts by <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label> </h1></asp:TableHeaderCell>
+
+        </asp:TableRow>
+        
+    </asp:Table>
     
-<asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+
 </asp:Content>

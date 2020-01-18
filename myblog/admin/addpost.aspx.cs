@@ -11,7 +11,7 @@ namespace myblog.admin
     public partial class addpost : System.Web.UI.Page
     {
         string author;
-        SqlConnection con = new SqlConnection("Data Source=.\\SQLEXPRESS;AttachDbFilename='C:\\Users\\kishan\\Documents\\Visual Studio 2010\\Projects\\BLOG-using-ASP\\myblog\\App_Data\\blog.mdf';Integrated Security=True;User Instance=True");
+        SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\upeksha\Documents\GitHub\BLOG-using-ASP\myblog\App_Data\blog.mdf;Integrated Security=True;User Instance=True");
         SqlCommand cmd;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -38,6 +38,7 @@ namespace myblog.admin
                 cmd.ExecuteNonQuery();
                 con.Close();
                 Label1.Text = "Post added.";
+                Response.Redirect("dashboard.aspx");
             }
             catch (Exception ex)
             {

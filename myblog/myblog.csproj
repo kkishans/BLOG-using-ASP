@@ -59,7 +59,9 @@
     <Content Include="css\StyleSheet1.css" />
     <Content Include="index.aspx" />
     <Content Include="login.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -116,9 +118,6 @@
     <Content Include="main.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Code\" />
-  </ItemGroup>
-   <ItemGroup>
     <Content Include="admin\admin.Master" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
