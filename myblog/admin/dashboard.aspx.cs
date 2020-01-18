@@ -6,14 +6,18 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
+using System.Configuration;
 
 
 namespace myblog.admin
 {
     public partial class dashboard : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection("Data Source=.\\SQLEXPRESS;AttachDbFilename='C:\\Users\\kishan\\Documents\\Visual Studio 2010\\Projects\\BLOG-using-ASP\\myblog\\App_Data\\blog.mdf';Integrated Security=True;User Instance=True");
-       
+
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["mycon"].ToString());
+        
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["user"] != null)

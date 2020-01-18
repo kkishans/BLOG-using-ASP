@@ -5,13 +5,14 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace myblog.admin
 {
     public partial class addpost : System.Web.UI.Page
     {
         string author;
-        SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\upeksha\Documents\GitHub\BLOG-using-ASP\myblog\App_Data\blog.mdf;Integrated Security=True;User Instance=True");
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["mycon"].ToString());
         SqlCommand cmd;
         protected void Page_Load(object sender, EventArgs e)
         {
