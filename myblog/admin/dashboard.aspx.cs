@@ -12,8 +12,8 @@ namespace myblog.admin
 {
     public partial class dashboard : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\upeksha\Documents\GitHub\BLOG-using-ASP\myblog\App_Data\blog.mdf;Integrated Security=True;User Instance=True");
-
+        SqlConnection con = new SqlConnection("Data Source=.\\SQLEXPRESS;AttachDbFilename='C:\\Users\\kishan\\Documents\\Visual Studio 2010\\Projects\\BLOG-using-ASP\\myblog\\App_Data\\blog.mdf';Integrated Security=True;User Instance=True");
+       
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["user"] != null)
@@ -30,38 +30,47 @@ namespace myblog.admin
 
             TableRow trow;
             TableCell tcell;
+            Button btn;
+      
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
+                int post_id = 0;
+                trow = new TableRow();
                 foreach (DataColumn dc in ds.Tables[0].Columns)
                 {
-                    trow = new TableRow();
+                   
                     tcell = new TableCell();
-                    trow.CssClass = "post-body";
+                    //trow.CssClass = "post-body";
                     if (dc.ColumnName.ToString().Equals("postid"))
                     {
-                        continue;
+                       post_id = Convert.ToInt32(dr[dc.ColumnName].ToString());
                     }
                     else if (dc.ColumnName.ToString().Equals("title"))
                     {
-                        tcell.Controls.Add(new LiteralControl(dr[dc.ColumnName].ToString()));
-                        tcell.CssClass = "post-head";
+                       // tcell.CssClass = "post-head";
                     }
-                    else if (dc.ColumnName.ToString().Equals("content"))
+                    else
                     {
-                        tcell.Controls.Add(new LiteralControl(dr[dc.ColumnName].ToString()));
-                        tcell.CssClass = "post-content";
+                        continue;
                     }
-                    else if (dc.ColumnName.ToString().Equals("author"))
-                    {
-                        tcell.Controls.Add(new LiteralControl("written by   : " + dr[dc.ColumnName].ToString()));
-                        tcell.CssClass = "post-author";
-                    }
-                    tcell.ColumnSpan = 2;
-
+                    tcell.Controls.Add(new LiteralControl(dr[dc.ColumnName].ToString()));
                     trow.Cells.Add(tcell);
-                    Table1.Rows.Add(trow);
                 }
-
+                btn = new Button();
+                btn.Text = "Update";
+                tcell = new TableCell();
+                btn.CssClass = "btn_update";
+                btn.PostBackUrl = "updatepost.aspx?pid="+ post_id;
+                tcell.Controls.Add(btn);
+                trow.Cells.Add(tcell);
+                btn = new Button();
+                btn.Text = "Delete";
+                tcell = new TableCell();
+                btn.CssClass = "btn_update";
+                btn.PostBackUrl = "deletepost.aspx?pid=" + post_id;
+                tcell.Controls.Add(btn);
+                trow.Cells.Add(tcell);
+                Table1.Rows.Add(trow);
 
             }
 
