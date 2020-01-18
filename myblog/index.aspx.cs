@@ -24,29 +24,32 @@ namespace myblog
             TableCell tcell;
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
-                trow = new TableRow();
-                trow.CssClass = "post";
                 foreach (DataColumn dc in ds.Tables[0].Columns)
                 {
                     trow = new TableRow();
                     tcell = new TableCell();
-                    tcell.Controls.Add(new LiteralControl(dr[dc.ColumnName].ToString()));
+                    trow.CssClass = "post-body";
                     if (dc.ColumnName.ToString().Equals("postid"))
                     {
                         continue;
                     }
                     else if (dc.ColumnName.ToString().Equals("title"))
                     {
+                       tcell.Controls.Add(new LiteralControl(dr[dc.ColumnName].ToString()));
                        tcell.CssClass = "post-head";
                     }
                     else if (dc.ColumnName.ToString().Equals("content"))
                     {
+                        tcell.Controls.Add(new LiteralControl(dr[dc.ColumnName].ToString()));
                         tcell.CssClass = "post-content";
                     }
                     else if (dc.ColumnName.ToString().Equals("author"))
                     {
+                        tcell.Controls.Add(new LiteralControl("written by   : " + dr[dc.ColumnName].ToString()));
                         tcell.CssClass = "post-author";
                     }
+                    tcell.ColumnSpan = 2;
+                    
                     trow.Cells.Add(tcell);
                     Table1.Rows.Add(trow);
                 }

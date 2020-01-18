@@ -5,9 +5,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    
    
-    <asp:Table ID="Table1" runat="server">
+    <asp:Table ID="Table1" runat="server" CssClass="post-table" 
+        CellPadding="2" CellSpacing="2" >
         <asp:TableRow>
-            <asp:TableHeaderCell ColumnSpan="2">Posts</asp:TableHeaderCell>
+            <asp:TableHeaderCell ColumnSpan="2"><h1>All Posts</h1></asp:TableHeaderCell>
 
         </asp:TableRow>
         

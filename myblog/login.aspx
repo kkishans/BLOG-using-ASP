@@ -16,7 +16,5 @@
             Text="Log In as Admin" onclick="btnAdminsubmit_Click"  />
     </div>
 
-    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-
-
+    <asp:Label ID="Label1" runat="server" Text="Label" Visible="false" style="color:Red; text-align:center;" align="center"></asp:Label>
 </asp:Content>

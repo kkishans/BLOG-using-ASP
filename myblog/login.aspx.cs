@@ -18,6 +18,7 @@ namespace myblog
             {
                 Response.Redirect("/admin/dashboard.aspx");
             }
+             Label1.Visible = false;
         }
 
         protected void btnUsersubmit_Click(object sender, EventArgs e)
@@ -40,7 +41,8 @@ namespace myblog
                 }
                 else
                 {
-                    Label1.Text = "incorect useername or password.";
+                    Label1.Visible = true;
+                    Label1.Text = "incorect username or password.";
                 }
            
                 con.Close();
@@ -62,7 +64,7 @@ namespace myblog
                 cmd.CommandText = "select * from users where username = '" + txtUname.Text + "' and password ='" + txtpass.Text + "'";
                 cmd.Connection = con;
                 SqlDataReader dr = cmd.ExecuteReader();
-
+                Label1.Visible = true;
                 if (dr.Read())
                 {
                     Session["user"] = txtUname.Text;
@@ -70,7 +72,8 @@ namespace myblog
                 }
                 else
                 {
-                    Label1.Text = "incorect useername or password.";
+                    Label1.Text = txtUname.Text.ToString();
+                    Label1.Text = "incorect username or password.";
                 }
 
                 con.Close();
