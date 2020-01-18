@@ -16,6 +16,14 @@
     color:White;    
     font-size:40px;
 }
+.navbutton
+{
+     color:White;    
+    font-size:40px;
+    border:none;
+    background:none;
+    font-family:MS Gothic;
+}
 .main
 {
     margin-top:100px;
@@ -104,4 +112,16 @@
 .post
 {
     margin-bottom:30px;
+}
+.post-head
+{
+    font-size:25px;
+}
+.post-content
+{
+    margin-left:100px;   
+}
+.post-author
+{
+    margin-left:100px;
 }

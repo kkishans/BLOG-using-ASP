@@ -14,8 +14,8 @@
     <form id="form1" runat="server">
     <div>
         <div class="navbar">
-            My Blog
-         
+            <asp:Button ID="btnhome" class="navbutton" runat="server" Text="My Blog" 
+                onclick="btnhome_Click" />
             <asp:Button runat="server"  ID ="btnlogin" class="btn" align="right" 
                 Text="Log in" onclick="btnlogin_Click"/>
         </div>

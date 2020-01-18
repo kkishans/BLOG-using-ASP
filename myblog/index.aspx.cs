@@ -13,7 +13,7 @@ namespace myblog
     {
         SqlConnection con = new SqlConnection("Data Source=.\\SQLEXPRESS;AttachDbFilename='C:\\Users\\kishan\\Documents\\Visual Studio 2010\\Projects\\BLOG-using-ASP\\myblog\\App_Data\\blog.mdf';Integrated Security=True;User Instance=True");
        
-        protected void Page_Load(object sender, EventArgs e)
+           protected void Page_Load(object sender, EventArgs e)
         {
             con.Open();
             SqlDataAdapter adb = new SqlDataAdapter("select * from posts", con);
@@ -25,16 +25,35 @@ namespace myblog
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
                 trow = new TableRow();
+                trow.CssClass = "post";
                 foreach (DataColumn dc in ds.Tables[0].Columns)
                 {
+                    trow = new TableRow();
                     tcell = new TableCell();
                     tcell.Controls.Add(new LiteralControl(dr[dc.ColumnName].ToString()));
+                    if (dc.ColumnName.ToString().Equals("postid"))
+                    {
+                        continue;
+                    }
+                    else if (dc.ColumnName.ToString().Equals("title"))
+                    {
+                       tcell.CssClass = "post-head";
+                    }
+                    else if (dc.ColumnName.ToString().Equals("content"))
+                    {
+                        tcell.CssClass = "post-content";
+                    }
+                    else if (dc.ColumnName.ToString().Equals("author"))
+                    {
+                        tcell.CssClass = "post-author";
+                    }
                     trow.Cells.Add(tcell);
+                    Table1.Rows.Add(trow);
                 }
-                Table1.Rows.Add(trow);
+
+               
             }
 
-            
         }
     }
 }

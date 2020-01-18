@@ -18,5 +18,10 @@ namespace myblog
         {
             Response.Redirect("login.aspx");
         }
+
+        protected void btnhome_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("index.aspx");
+        }
     }
 }
