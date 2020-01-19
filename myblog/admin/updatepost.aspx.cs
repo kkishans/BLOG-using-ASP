@@ -14,10 +14,8 @@ namespace myblog.admin
     {
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["mycon"].ToString());
         SqlCommand cmd;
-        string postid;
-        string title; 
-        string content;
-       
+        string title,content,postid;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             postid = Request.QueryString["pid"];
@@ -28,28 +26,32 @@ namespace myblog.admin
             }
             //else author = Session["user"].ToString();   
 
-            try
+            if (!IsPostBack)
             {
-                con.Open();
-                cmd = new SqlCommand();
-                cmd.CommandText = "select * from posts where postid = " + postid;
-                cmd.Connection = con;
-                SqlDataReader dr = cmd.ExecuteReader();
-
-                if (dr.Read())
+                try
                 {
-                    txtTitle.Text = dr[1].ToString();
-                    txtContent.Text = dr[2].ToString();
-                    title = txtTitle.Text;
-                    content = txtContent.Text;
-                }
-                con.Close();
-            }
-            catch (Exception ex)
-            {
+                    con.Open();
+                    cmd = new SqlCommand();
+                    cmd.CommandText = "select * from posts where postid = " + postid;
+                    cmd.Connection = con;
+                    SqlDataReader dr = cmd.ExecuteReader();
 
-                Label1.Text = ex.Message;
+                    if (dr.Read())
+                    {
+                        txtTitle.Text = dr[1].ToString();
+                        txtContent.Text = dr[2].ToString();
+                        title = txtTitle.Text;
+                        content = txtContent.Text;
+                    }
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+
+                    Label1.Text = ex.Message;
+                }
             }
+
         }
         protected void txtTitle_TextChanged(object sender, EventArgs e)
         {
@@ -60,8 +62,10 @@ namespace myblog.admin
         {
             content = txtContent.Text;
         }
-        protected void btnaddpost_Click(object sender, EventArgs e)
-        {        
+        protected void btnupdatepost_Click(object sender, EventArgs e)
+        {
+            title = txtTitle.Text;
+            content = txtContent.Text;
             try
             {
                 con.Open();
@@ -75,7 +79,7 @@ namespace myblog.admin
                 cmd.ExecuteNonQuery();
                 con.Close();
                 Label1.Text = title + " " + content;
-                //Response.Redirect("dashboard.aspx");
+                Response.Redirect("dashboard.aspx");
             }
             catch (Exception ex)
             {
@@ -84,6 +88,6 @@ namespace myblog.admin
             }
         }
 
-        
+
     }
 }

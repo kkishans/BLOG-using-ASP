@@ -23,7 +23,7 @@ namespace myblog
              Label1.Visible = false;
         }
 
-        protected void btnUsersubmit_Click(object sender, EventArgs e)
+       /* protected void btnUsersubmit_Click(object sender, EventArgs e)
         {
             
             try
@@ -55,7 +55,7 @@ namespace myblog
 
                 Label1.Text = ex.Message;
             }
-        }
+        }*/
 
         protected void btnAdminsubmit_Click(object sender, EventArgs e)
         {

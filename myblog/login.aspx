@@ -10,10 +10,9 @@
         <br />
 
         <asp:TextBox ID="txtpass" class="textbox" runat="server" TextMode="password" placeholder="password"></asp:TextBox><br/><br/>
-        <asp:Button ID="btnUsersubmit" class="loginbtn" runat="server" 
-            Text="Log In as User" onclick="btnUsersubmit_Click"  /><br />
+        
         <asp:Button ID="btnAdminsubmit" class="loginbtn" runat="server" 
-            Text="Log In as Admin" onclick="btnAdminsubmit_Click"  />
+            Text="Log In " onclick="btnAdminsubmit_Click"  />
     </div>
 
     <asp:Label ID="Label1" runat="server" Text="Label" Visible="false" style="color:Red; text-align:center;" align="center"></asp:Label>

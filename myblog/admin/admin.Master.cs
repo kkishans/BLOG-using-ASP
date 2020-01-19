@@ -11,12 +11,20 @@ namespace myblog.admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["user"] == null)
+            {
+                Response.Redirect("../login.aspx");
+            }
         }
 
         protected void logout_Click(object sender, EventArgs e)
         {
             Session["user"] = null;
+            Response.Redirect("../index.aspx");
+        }
+
+        protected void btnhome_Click(object sender, EventArgs e)
+        {
             Response.Redirect("../index.aspx");
         }
     }

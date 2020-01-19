@@ -2,6 +2,11 @@
 {
     background:#ffafa;
     font-family:MS Gothic;
+    user-select:none;
+}
+::-webkit-scrollbar
+{
+    display:none;
 }
 .navbar
 {
@@ -23,6 +28,7 @@
     border:none;
     background:none;
     font-family:MS Gothic;
+    outline:none;
 }
 .main
 {
@@ -69,12 +75,28 @@
     padding:10px;
      background:#f5f5f5;
 }
+.menubar ul li:hover
+{
+    margin:5px 10px 5px -15px;
+    border:1px solid dodgerblue;
+}
+.menubar a
+{
+    text-decoration:none;
+}
+.menubar a:visited
+{
+    text-decoration:none;
+    color:Blue;
+}
 .btn
 {
     border:none;
     background:none;
     font-size:30px;
     float:right;
+    padding-top:8px;
+    outline:none;
 }
 .textbox
 {
@@ -83,6 +105,14 @@
     border-bottom:2px solid dodgerblue;
     font-size:25px;
     text-align:center;
+}
+.contentbox
+{
+    min-height:100px;
+    min-width:400px;
+    border: 2px solid dodgerblue;
+    font-family:Arial Baltic;
+    font-size:15px;
 }
 .loginbtn
 {
@@ -107,7 +137,10 @@
 {
     padding-top:20px;   
 }
-
+.addpost-body
+{
+    text-align:center;
+}
 .post
 {
     margin-bottom:30px;
@@ -175,6 +208,11 @@
     font-size:20px;
     padding:10px;
 }
+.btn-update:hover
+{
+    color:white;
+    background-color:green;
+}
 .btn-delete
 {
     background:none;
@@ -184,4 +222,9 @@
     font-size:20px;
     padding:10px;
     
+}
+.btn-delete:hover
+{
+    background-color:red;
+    color:white;
 }

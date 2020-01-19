@@ -50,6 +50,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="aboutus.aspx" />
     <Content Include="admin\addpost.aspx" />
     <Content Include="admin\dashboard.aspx" />
     <Content Include="admin\deletepost.aspx" />
@@ -72,6 +73,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="aboutus.aspx.cs">
+      <DependentUpon>aboutus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aboutus.aspx.designer.cs">
+      <DependentUpon>aboutus.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\addpost.aspx.cs">
       <DependentUpon>addpost.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

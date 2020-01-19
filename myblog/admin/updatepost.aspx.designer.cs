@@ -13,6 +13,15 @@ namespace myblog.admin {
     public partial class updatepost {
         
         /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
+        
+        /// <summary>
         /// txtTitle control.
         /// </summary>
         /// <remarks>
@@ -20,6 +29,15 @@ namespace myblog.admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTitle;
+        
+        /// <summary>
+        /// Label3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
         /// txtContent control.
@@ -31,13 +49,13 @@ namespace myblog.admin {
         protected global::System.Web.UI.WebControls.TextBox txtContent;
         
         /// <summary>
-        /// btnaddpost control.
+        /// btnupdatepost control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnaddpost;
+        protected global::System.Web.UI.WebControls.Button btnupdatepost;
         
         /// <summary>
         /// Label1 control.

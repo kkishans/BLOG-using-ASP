@@ -14,16 +14,17 @@
     <form id="form1" runat="server">
     <div>
         <div class="navbar">
-            My Blog
+            <asp:Button ID="btnhome"  runat="server" Text="My Blog" class="navbutton" 
+                onclick="btnhome_Click" />
               <asp:Button ID="logout" class="btn" runat="server" Text="Log Out" 
                 onclick="logout_Click" />
            
         </div>
         <div class="menubar">
             <ul>
-                <li><a href="addpost.aspx">Add Post</a></li>
-                <li>About Us</li>
-                <li>Services</li>
+                <li><a href="dashboard.aspx">DashBorad</a></li>
+                 <li><a href="addpost.aspx">Add Post</a></li>
+                <li><a href="../aboutus.aspx">About us</a></li>
             </ul>
         </div>
         <div class="main">

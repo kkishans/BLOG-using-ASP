@@ -11,7 +11,17 @@ namespace myblog
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["user"] != null)
+            {
+                btnlogin.Visible = false;
+                btnDashbord.Text = "Hello,  " + Session["user"];
+                btnDashbord.Visible = true;
+            }
+            else
+            {
+                btnDashbord.Visible = false;
+                btnlogin.Visible = true;
+            }
         }
 
         protected void btnlogin_Click(object sender, EventArgs e)
@@ -22,6 +32,11 @@ namespace myblog
         protected void btnhome_Click(object sender, EventArgs e)
         {
             Response.Redirect("index.aspx");
+        }
+
+        protected void btnDashbord_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("admin/dashboard.aspx");
         }
     }
 }

@@ -2,18 +2,23 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="login-content addpost">
-        <asp:TextBox ID="txtTitle" class="textbox post" placeholder="Title" runat="server" 
-            Width="500px"></asp:TextBox>
+    <div class="login-content" align="center">
+        <h1>Add New Post,
+        </h1><br/><br/>
+        <asp:Label ID="Label1" runat="server" class="post-list-head" Text="Label">Post Title:</asp:Label>
+        <asp:TextBox ID="txtTitle" class="textbox post" placeholder="Title" runat="server"></asp:TextBox>
         <br />
+        <asp:Label ID="Label3" runat="server" Text="Label" class="post-list-head">Post Content:</asp:Label><br><br>
         <asp:TextBox ID="txtContent" placeholder="Content" runat="server" 
-            class="textbox post" Height="103px" TextMode="MultiLine" Width="500px"></asp:TextBox>
+            class="contentbox" TextMode="MultiLine" ></asp:TextBox>
         <br />
-        <asp:Button ID="btnaddpost" class="loginbtn post" runat="server" 
+        <asp:Button ID="btnaddpost" class="loginbtn" runat="server" 
             Text="Add Post" onclick="btnaddpost_Click" />
         <br />
         <br />
-        <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+        <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
         <br />
-    </div>
+    </div>>
+    
+   
 </asp:Content>
