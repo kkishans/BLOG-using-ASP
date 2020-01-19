@@ -27,7 +27,7 @@ namespace myblog.admin
             //else author = Session["user"].ToString();   
 
             if (!IsPostBack)
-            {
+			{
                 try
                 {
                     con.Open();
@@ -51,10 +51,10 @@ namespace myblog.admin
                     Label1.Text = ex.Message;
                 }
             }
-
         }
+ 
         protected void txtTitle_TextChanged(object sender, EventArgs e)
-        {
+        { 
             title = txtTitle.Text;
         }
 
@@ -62,8 +62,9 @@ namespace myblog.admin
         {
             content = txtContent.Text;
         }
+
         protected void btnupdatepost_Click(object sender, EventArgs e)
-        {
+       {
             title = txtTitle.Text;
             content = txtContent.Text;
             try
@@ -87,7 +88,5 @@ namespace myblog.admin
 
             }
         }
-
-
     }
 }
