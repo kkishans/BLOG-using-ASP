@@ -28,7 +28,9 @@ namespace myblog.admin
             }
             //else author = Session["user"].ToString();   
 
-            try
+            if (!IsPostBack)
+            {
+                try
             {
                 con.Open();
                 cmd = new SqlCommand();
@@ -50,9 +52,11 @@ namespace myblog.admin
 
                 Label1.Text = ex.Message;
             }
+            }
+            
         }
         protected void txtTitle_TextChanged(object sender, EventArgs e)
-        {
+        { 
             title = txtTitle.Text;
         }
 
@@ -61,7 +65,9 @@ namespace myblog.admin
             content = txtContent.Text;
         }
         protected void btnaddpost_Click(object sender, EventArgs e)
-        {        
+        {
+            title = txtTitle.Text;
+            content = txtContent.Text;
             try
             {
                 con.Open();
@@ -75,7 +81,7 @@ namespace myblog.admin
                 cmd.ExecuteNonQuery();
                 con.Close();
                 Label1.Text = title + " " + content;
-                //Response.Redirect("dashboard.aspx");
+                Response.Redirect("dashboard.aspx");
             }
             catch (Exception ex)
             {
