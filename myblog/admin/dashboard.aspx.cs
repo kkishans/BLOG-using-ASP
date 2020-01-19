@@ -44,14 +44,15 @@ namespace myblog.admin
                 {
                    
                     tcell = new TableCell();
-                    //trow.CssClass = "post-body";
+                    tcell.CssClass = "post-list";
                     if (dc.ColumnName.ToString().Equals("postid"))
                     {
                        post_id = Convert.ToInt32(dr[dc.ColumnName].ToString());
+                       tcell.CssClass = "post-list";
                     }
                     else if (dc.ColumnName.ToString().Equals("title"))
                     {
-                       // tcell.CssClass = "post-head";
+                       tcell.CssClass = "post-list";
                     }
                     else
                     {
@@ -63,16 +64,18 @@ namespace myblog.admin
                 btn = new Button();
                 btn.Text = "Update";
                 tcell = new TableCell();
-                btn.CssClass = "btn_update";
+                btn.CssClass = "btn-update";
                 btn.PostBackUrl = "updatepost.aspx?pid="+ post_id;
                 tcell.Controls.Add(btn);
+                tcell.CssClass = "post-list";
                 trow.Cells.Add(tcell);
                 btn = new Button();
                 btn.Text = "Delete";
                 tcell = new TableCell();
-                btn.CssClass = "btn_update";
+                btn.CssClass = "btn-delete";
                 btn.PostBackUrl = "deletepost.aspx?pid=" + post_id;
                 tcell.Controls.Add(btn);
+                tcell.CssClass = "post-list";
                 trow.Cells.Add(tcell);
                 Table1.Rows.Add(trow);
 

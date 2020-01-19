@@ -12,10 +12,10 @@
         </asp:TableRow>
 
         <asp:TableRow>
-            <asp:TableHeaderCell>Post Id</asp:TableHeaderCell>
-            <asp:TableHeaderCell>Post Title</asp:TableHeaderCell>
-            <asp:TableHeaderCell>Update</asp:TableHeaderCell>
-            <asp:TableHeaderCell>Delete</asp:TableHeaderCell>
+            <asp:TableHeaderCell CssClass="post-list-head">Post Id</asp:TableHeaderCell>
+            <asp:TableHeaderCell  CssClass="post-list-head">Post Title</asp:TableHeaderCell>
+            <asp:TableHeaderCell  CssClass="post-list-head">Update</asp:TableHeaderCell>
+            <asp:TableHeaderCell  CssClass="post-list-head">Delete</asp:TableHeaderCell>
         </asp:TableRow>
         
     </asp:Table>
