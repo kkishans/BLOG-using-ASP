@@ -3,11 +3,6 @@ c:\users\kishan\documents\visual studio 2010\Projects\myblog\myblog\bin\myblog.p
 c:\users\kishan\documents\visual studio 2010\Projects\myblog\myblog\obj\Debug\myblog.dll
 c:\users\kishan\documents\visual studio 2010\Projects\myblog\myblog\obj\Debug\myblog.pdb
 C:\Users\kishan\documents\visual studio 2010\Projects\myblog\myblog\obj\Debug\myblog.csprojResolveAssemblyReference.cache
-C:\Users\kishan\Documents\Visual Studio 2010\Projects\BLOG-using-ASP\myblog\bin\myblog.dll
-C:\Users\kishan\Documents\Visual Studio 2010\Projects\BLOG-using-ASP\myblog\bin\myblog.pdb
-C:\Users\kishan\Documents\Visual Studio 2010\Projects\BLOG-using-ASP\myblog\obj\Debug\myblog.csprojResolveAssemblyReference.cache
-C:\Users\kishan\Documents\Visual Studio 2010\Projects\BLOG-using-ASP\myblog\obj\Debug\myblog.dll
-C:\Users\kishan\Documents\Visual Studio 2010\Projects\BLOG-using-ASP\myblog\obj\Debug\myblog.pdb
 D:\Projects\ASP.NET\BLOG-using-ASP-master\BLOG-using-ASP-master\myblog\obj\Debug\myblog.csprojResolveAssemblyReference.cache
 D:\Projects\ASP.NET\BLOG-using-ASP-master\BLOG-using-ASP-master\myblog\obj\Debug\myblog.dll
 D:\Projects\ASP.NET\BLOG-using-ASP-master\BLOG-using-ASP-master\myblog\obj\Debug\myblog.pdb
@@ -23,3 +18,7 @@ C:\Users\upeksha\Documents\GitHub\BLOG-using-ASP\myblog\obj\Debug\myblog.dll
 C:\Users\upeksha\Documents\GitHub\BLOG-using-ASP\myblog\obj\Debug\myblog.pdb
 C:\Users\upeksha\Documents\GitHub\BLOG-using-ASP\myblog\bin\myblog.dll
 C:\Users\upeksha\Documents\GitHub\BLOG-using-ASP\myblog\bin\myblog.pdb
+C:\Users\kishan\Documents\Visual Studio 2010\Projects\BLOG-using-ASP\myblog\bin\myblog.dll
+C:\Users\kishan\Documents\Visual Studio 2010\Projects\BLOG-using-ASP\myblog\bin\myblog.pdb
+C:\Users\kishan\Documents\Visual Studio 2010\Projects\BLOG-using-ASP\myblog\obj\Debug\myblog.dll
+C:\Users\kishan\Documents\Visual Studio 2010\Projects\BLOG-using-ASP\myblog\obj\Debug\myblog.pdb
